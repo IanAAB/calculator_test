@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+    <style>
+        body{
+            margin: 0px;
+            }
+        header{
+            background-color: #3331b0;
+            padding: 60px;
+            }
+        header h1{
+            text-align: center;
+            color:white 
+            }
+
+        .container{
+            border: 1px solid #3331b0;
+            border-radius: 25px;
+
+            
+
+            margin:50px auto;
+            padding: 5px;
+            text-align: center;
+            width: 20%;
+             }
+        input{
+            margin: 5px;
+            width: 70%;
+            }
+            input:hover{
+                background-color: #d6d6d6;
+                 }
+        button{
+            margin: 5px;
+            padding: 5px;
+            width: 10%;
+            background-color: teal;
+            border: 2px solid cornflowerblue;
+            color: cyan;
+            align-items: center;
+            }
+    </style>
+</head>
+<body>
+    
+    <header>
+<h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Calculadora Simples </h1>
+    </header>
+    <div class="container">
+
+<input type="number" id="x" placeholder="Valor de X">
+<input type="number" id="y" placeholder="Valor de Y">
+<input type="number" id="z" placeholder="Resultado" readonly>
+<br><button type="button" onclick="somar()">+</button>
+<button type="button" onclick="subtrair()">-</button>
+<button type="button" onclick="dividir()">/</button>
+<button type="button" onclick="multiplicar()">*</button>
+<button type="button" onclick='raiz()'>√</button>
+<button type="button" onclick='quadrada()'>**</button>
+<button type="button" onclick='limpar()'>C</button>
+<button type="button" onclick='resto()'>%</button>
+
+
+
+
+</div>
+
+<script>
+    const somar = function(){
+        let x = document.getElementById('x').value
+        let y = document.getElementById('y').value
+        z = parseFloat(x) + parseFloat(y)
+        document.getElementById('z').value = z
+        console.log(z)
+        }
+</script>
+<script>
+    const subtrair = function(){
+        let x = document.getElementById('x').value
+        let y = document.getElementById('y').value
+        z = parseFloat(x) - parseFloat(y)
+        document.getElementById('z').value = z
+        console.log(z)
+        }
+</script> 
+
+<script>
+    const dividir = function(){
+        let x = document.getElementById('x').value
+        let y = document.getElementById('y').value
+        z = parseFloat(x) / parseFloat(y)
+        document.getElementById('z').value = z
+        console.log(z)
+        }
+</script>
+
+<script>
+    const multiplicar = function(){
+        let x = document.getElementById('x').value
+        let y = document.getElementById('y').value
+        z = parseFloat(x) * parseFloat(y)
+        document.getElementById('z').value = z
+        console.log(z)
+        }
+</script>
+<script>
+    const raiz = function(){
+        let x = document.getElementById('x').value
+        z = Math.sqrt(x)
+        document.getElementById('z').value = z
+        console.log(z)
+        }
+</script>
+<script>
+    const quadrada = function(){
+        let x = document.getElementById('x').value
+        let y = document.getElementById('y').value
+        z = Math.pow(x, y) 
+        document.getElementById('z').value = z
+        console.log(Math.pow(x, y))
+        }
+</script>
+<script>
+    const limpar = function(){
+    document.getElementById('x').value = ''
+    document.getElementById('y').value = ''
+
+    document.getElementById('z').value = ''
+
+        }
+</script>
+<script>
+    const resto = function(){
+        let x = document.getElementById('x').value
+        let y = document.getElementById('y').value
+        z = parseFloat(x) % parseFloat(y)
+        document.getElementById('z').value = z
+        console.log(z)
+        }
+</script>
+</script>
+</body>
+</html>
